@@ -44,7 +44,7 @@ function Project() {
             <Card style={{backgroundColor:'black',border:'1px solid white',boxShadow:' 4px 3px  4px darkblue'}}>
               <Card.Img variant="top" src={`${process.env.REACT_APP_API_URL}/uploads/${project.image}`} />
               <Card.Body>
-                <Card.Title style={{color:'white'}}><u><strong>Title :-</strong></u>{project.title}</Card.Title>
+                <Card.Title style={{color:'white'}}><strong>Title :-</strong>{project.title}</Card.Title>
                 <Card.Text>
                   <strong>Technologies Used :-</strong> {project.technology}
                   <br/>
