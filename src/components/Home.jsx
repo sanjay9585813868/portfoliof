@@ -13,7 +13,7 @@ const Home = () => {
           <br />
           <Col>
             <h5>
-              Hi, I'm <i>Sanjay</i>, a passionate Full Stack Developer with a strong track
+              Hi, I'm <i>M.Sanjay</i>, a passionate Java FullStack Developer with a strong track
               record of creating dynamic and user-centered web applications. With expertise
               in both front-end and back-end development, I specialize in bringing innovative
               ideas to life while optimizing for performance, scalability, and an exceptional

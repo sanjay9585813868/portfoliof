@@ -24,7 +24,7 @@ function App() {
         <Navbar bg="black" data-bs-theme="dark" 
         className="header" expand="lg">
           <Container>
-            <Navbar.Brand href="/">Java Developer</Navbar.Brand>
+            <Navbar.Brand href="/">SANJAY M</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">

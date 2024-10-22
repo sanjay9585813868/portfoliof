@@ -1,4 +1,3 @@
-// src/ProjectList.js
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Alert } from 'react-bootstrap';
 import axios from 'axios';
@@ -21,16 +20,15 @@ function Project() {
   }, []);
 
   const handleButtonClick = (url) => {
-    // Extract the part of the URL after '/projects/'
-    const extractedUrl = url.split('/projects/')[1];
-
-    if (extractedUrl.startsWith('http://') || extractedUrl.startsWith('https://')) {
-      // Redirect to external URL
-      console.log(extractedUrl.startsWith('http://'));
-      
-      window.location.href = extractedUrl;
+    // const extractedUrl = url.split('/projects/')[1];
+    if (!url) {
+      console.error('URL is undefined or null');
+      return;
+    }
+  
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      window.location.href = url;
     } else {
-      // Navigate internally using react-router-dom
       navigate(url);
     }
   };
@@ -43,14 +41,18 @@ function Project() {
       <Row>
         {projects.map((project) => (
           <Col key={project.id} sm={4} className="project">  
-            <Card>
+            <Card style={{backgroundColor:'black',border:'1px solid white',boxShadow:' 4px 3px  4px darkblue'}}>
               <Card.Img variant="top" src={`${process.env.REACT_APP_API_URL}/uploads/${project.image}`} />
               <Card.Body>
-                <Card.Title>{project.title}</Card.Title>
-                <Card.Text>{project.technology}</Card.Text>
+                <Card.Title style={{color:'white'}}><u><strong>Title :-</strong></u>{project.title}</Card.Title>
+                <Card.Text>
+                  <strong>Technologies Used :-</strong> {project.technology}
+                  <br/>
+                  <strong>Description :-</strong> {project.description}
+                </Card.Text>
                 <Button
                   variant="primary"
-                  onClick={() => handleButtonClick(`${process.env.REACT_APP_API_URL}/projects/${project.Url}`)} // Pass full URL
+                  onClick={() => handleButtonClick(project.Url)} // Directly pass the URL
                 >
                   View Project
                 </Button>
