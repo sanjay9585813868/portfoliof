@@ -52,8 +52,7 @@ function Download() {
   };
 
   return (
-    <Container className="mt-5" fluid>
-      <h1>Download Resume</h1>
+    <Container className="mt-3" fluid>
       {message && <Alert variant={statusType === 'error' ? 'danger' : 'info'}>{message}</Alert>}
       <Button variant="success" onClick={handleDownload} disabled={loading}>
         {loading ? 'Downloading...' : 'Download Resume'}

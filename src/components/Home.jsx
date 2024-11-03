@@ -21,6 +21,8 @@ const Home = () => {
             </h5>
           </Col>
           <Col>
+          <br/>
+          <h1>Download Resume</h1>
             <Download />
           </Col>
         </Col>
