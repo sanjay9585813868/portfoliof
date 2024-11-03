@@ -24,9 +24,9 @@ const PrrofileDisplay = () => {
       {profilePicture ? (
         <img src={profilePicture} alt="Profile" className='images' />
       ) : (<div>
-        <p>No profile picture uploaded.</p>
+        <p>Loading...</p>
         <div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>  {/* Improved accessibility for spinner */}
+          <span className="visually-hidden"></span>  {/* Improved accessibility for spinner */}
         </div>
       </div>
       )}
