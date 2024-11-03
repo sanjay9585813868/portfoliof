@@ -35,7 +35,7 @@ function App() {
                 <Nav.Link as={Link} to="/additional">Additional</Nav.Link>
                 <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
               </Nav>
-              <Nav className="justify-content-end">
+              <Nav className="ms-auto">
                 <Nav.Link href="https://github.com/sanjay9585813868" target="_blank">
                   <FaGithub size={30} color="white" />
                 </Nav.Link>
