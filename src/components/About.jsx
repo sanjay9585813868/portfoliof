@@ -12,15 +12,15 @@ const About = () => (
         <br />
         <h5>Sree sakthi Engineering College , Karamadai—<i>Degree</i> </h5>
         <p>2019 - 2023</p>
-        <p>B.E-Computer Science and Engineering —<i>CGPA of <b>7.55</b></i> </p>
+        <p>B.E-Computer Science and Engineering —<i> CGPA of <b>7.55</b></i> </p>
 
         <h5>CSI (CMM) HR SEC School,Ooty—<i> PUC</i> </h5>
         <p>2018 - 2019</p>
-        <p>12 th —<i><b>61%.</b></i> </p>
+        <p>12 th — <i><b>63.3%.</b></i> </p>
 
         <h5>CSI (CMM) HR SEC School,Ooty —<i> SSLC</i> </h5>
         <p> 2017 - 2018</p>
-        <p> 10 th —<i><b>89.6%</b>.</i> </p>
+        <p> 10 th — <i><b>89.6%</b>.</i> </p>
       </Col>
       <Col md={6} expand="lg">
         <h2>Get to know about me</h2>
