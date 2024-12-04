@@ -27,6 +27,7 @@ const PrrofileDisplay = () => {
         <p>No profile picture uploaded.</p>
         <div className="spinner-border" role="status">
           <span className="visually-hidden"></span>  {/* Improved accessibility for spinner */}
+          
         </div>
       </div>
       )}
