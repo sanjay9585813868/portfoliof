@@ -10,8 +10,8 @@ function Additional() {
   const handleShow = () => setShow(true);
 
   return (
-    <Container className="mt-5" expand="lg">
-      <h2>WORKSHOPS</h2>
+    <Container className="mt-0" expand="lg">
+      <h3>WORKSHOPS</h3>
       <Row expand="lg">
         <Col md={6}>
           <p>Attended a virtual workshop on
@@ -44,7 +44,7 @@ function Additional() {
           </Col>
         </Col>
         <Col md={6}>
-          <h2>Achievement</h2>
+          <h3>Achievement</h3>
           <p>
             <ul>
               <li>
@@ -62,7 +62,7 @@ function Additional() {
 
           
         <Col md={6}>
-          <h2>LANGUAGE</h2>
+          <h3>LANGUAGE</h3>
 
           <p> <ul>
             <li>

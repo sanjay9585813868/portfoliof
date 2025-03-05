@@ -35,11 +35,11 @@ function App() {
                 <Nav.Link as={Link} to="/additional">Additional</Nav.Link>
                 <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
               </Nav>
-              <Nav className="ms-auto">
+              <Nav className="ms-auto"> {/* Icons aligned to the right */}
                 <Nav.Link href="https://github.com/sanjay9585813868" target="_blank">
                   <FaGithub size={30} color="white" />
                 </Nav.Link>
-                <Nav.Link href="https://www.linkedin.com/in/sanjay-mani-014aa6265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <Nav.Link href="https://www.linkedin.com/in/sanjay-mani-014aa6265" target="_blank">
                   <FaLinkedin size={30} color="white" />
                 </Nav.Link>
               </Nav>

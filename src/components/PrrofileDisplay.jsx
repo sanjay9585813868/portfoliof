@@ -1,37 +1,55 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import { Container, Row, Col, Card, Button, Image, Modal } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const PrrofileDisplay = () => {
-  const [profilePicture, setProfilePicture] = useState(null);
+  const [story, setStory] = useState(localStorage.getItem("story") || "");
+  const [showStory, setShowStory] = useState(false);
+  const [newStory, setNewStory] = useState("");
 
-  useEffect(() => {
-    const fetchProfilePicture = async () => {
-      try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/get-profile-picture`);
-        const profilePicPath = response.data.profilePicture;
-        setProfilePicture(`${process.env.REACT_APP_API_URL}/uploads/${profilePicPath}`);
-      } catch (error) {
-        console.error('Error fetching profile picture:', error);
-      }
-    };
-
-    fetchProfilePicture();
-  }, []);
+  const handleStoryChange = () => {
+    localStorage.setItem("story", newStory);
+    setStory(newStory);
+    setNewStory("");
+  };
 
   return (
-    <div className='profile'>
-      <h3>Profile Picture</h3>
-      {profilePicture ? (
-        <img src={profilePicture} alt="Profile" className='images' />
-      ) : (<div>
-        <p>No profile picture uploaded.</p>
-        <div className="spinner-border" role="status">
-          <span className="visually-hidden"></span>  {/* Improved accessibility for spinner */}
-          
-        </div>
-      </div>
-      )}
-    </div>
+    <Container className="mt-5">
+      <Row className="justify-content-center">
+        <Col md={6} className="text-center">
+          <Card>
+            <Card.Body>
+              <Image
+                src="https://via.placeholder.com/100"
+                roundedCircle
+                style={{ cursor: "pointer", border: "2px solid #000" }}
+                onClick={() => setShowStory(true)}
+              />
+              <h3 className="mt-3">Your Name</h3>
+              <p>Full Stack Developer</p>
+              <input
+                type="text"
+                className="form-control mt-3"
+                placeholder="Enter new story"
+                value={newStory}
+                onChange={(e) => setNewStory(e.target.value)}
+              />
+              <Button className="mt-2" onClick={handleStoryChange}>
+                Update Story
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      {/* Story Modal */}
+      <Modal show={showStory} onHide={() => setShowStory(false)} centered>
+        <Modal.Body className="text-center">
+          <h5>Your Story</h5>
+          <p>{story || "No story set"}</p>
+        </Modal.Body>
+      </Modal>
+    </Container>
   );
 };
 

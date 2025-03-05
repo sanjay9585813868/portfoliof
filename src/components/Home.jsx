@@ -3,13 +3,17 @@ import { Row, Col, Container } from 'react-bootstrap';
 import Download from './Download';
 import ProfileDisplay from './PrrofileDisplay';
 import './Home.css';
+import Profile from './Profile';
+import Profileimg from './Profileimg';
+import profilePic from "./Image/profile.jpg"; // Replace with your actual image path
+
 
 const Home = () => {
   return (
     <Container >
       <Row >
         <Col  >
-          <h1>Welcome to My Portfolio</h1>
+          <h2>Welcome to My Portfolio</h2>
           <br />
           <Col>
             <h5>
@@ -22,13 +26,16 @@ const Home = () => {
           </Col>
           <Col>
           <br/>
-          <h1>Download Resume</h1>
+      <h2>Download Resume</h2>
             <Download />
           </Col>
         </Col>
 
-        <Col md={6} >
-          <ProfileDisplay /></Col>
+        <Col md={6} className="d-flex justify-content-center">
+        <br/>
+          <Profileimg profileImage={profilePic} />
+   
+          </Col>
       </Row>
 
     </Container>

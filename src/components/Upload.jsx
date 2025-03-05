@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
 import axios from 'axios';
-import ProjectForm from './ProjectForm';
 import Profile from './Profile';
 
 function Upload() {
@@ -51,9 +50,6 @@ function Upload() {
       </Form>
       <br/>
       </section>
-      <br/>
-      <hr className='line'/>
-      <ProjectForm/>
       <br/>
       <hr className='line'/>
       <Profile />
