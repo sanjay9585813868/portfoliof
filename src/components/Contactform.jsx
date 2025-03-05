@@ -24,13 +24,13 @@ const Contactform = () => {
     e.preventDefault();
     try {
       const response = await axios.put(`${process.env.REACT_APP_API_URL}/contact`, contactInfo);
-      setStatusMessage('Contact details saved successfully and email sent!');
+      setStatusMessage('Message sent successfully...');
       setStatusType('success');
-      console.log(response.data);
+      // console.log(response.data);
       setContactInfo({ name: '', phone: '', email: '', message: '' });
     } catch (error) {
-      console.error('Error submitting form', error);
-      setStatusMessage('Failed to save contact details.');
+      // console.error('Error submitting form', error);
+      setStatusMessage('Failed sent Message...');
       setStatusType('danger');
     }
   };

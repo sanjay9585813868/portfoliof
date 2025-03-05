@@ -30,7 +30,7 @@ const Profile = () => {
       setMessage('Profile picture uploaded successfully!');
       setSelectedFile(null);
     } catch (error) {
-      console.error('Error uploading profile picture:', error);
+      // console.error('Error uploading profile picture:', error);
       setMessage('Failed to upload profile picture.');
     }
   };

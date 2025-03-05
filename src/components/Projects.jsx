@@ -13,7 +13,7 @@ function Projects() {
 
   const handleButtonClick = (url) => {
     if (!url) {
-      console.error("URL is undefined or null");
+      // console.error("URL is undefined or null");
       return;
     }
     if (url.startsWith("http://") || url.startsWith("https://")) {
