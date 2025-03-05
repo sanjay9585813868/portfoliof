@@ -30,11 +30,11 @@ const Home = () => {
             <Download />
           </Col>
         </Col>
-
-        <Col md={6} className="d-flex justify-content-center">
+        <br/>
+        <br/>
+        <Col md={6} className="d-flex justify-content-center " style={{margin:'15px'}}>
         <br/>
           <Profileimg profileImage={profilePic} />
-   
           </Col>
       </Row>
 
